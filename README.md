@@ -5,6 +5,27 @@ You can create QR codes in **PNG format** or get them as **Base64-encoded string
 
 ---
 
+## 🛠 About This Package
+
+This package is a **simplified and optimized version** of a native QR code generator originally found in Oracle APEX.
+
+The original source code was:
+
+- Adapted from internal APEX utilities.
+- Cleaned and stripped down to include **only the essential logic**.
+- Reduced in size by removing unused procedures and extra dependencies.
+
+The package has been **successfully tested** in the following Oracle database versions:
+
+- ✅ Oracle 11g  
+- ✅ Oracle 19c
+
+It is expected to work without issues on **Oracle 21c and future versions** as it relies on standard PL/SQL and binary output (BLOB).
+
+> ⚙️ This version focuses on portability, simplicity, and integration with back-end PL/SQL logic that may require QR code output in either PNG or Base64 formats.
+
+----
+
 ## ✨ Features
 
 - Generate QR codes from any string or URL.
@@ -13,6 +34,21 @@ You can create QR codes in **PNG format** or get them as **Base64-encoded string
 - Easy to use in SQL or PL/SQL environments.
 
 ---
+
+## 📦 Installation
+
+To install the package, simply run the following two files in your Oracle environment:
+
+- `HC_QR.pks` – **Package specification**
+- `HC_QR.pkb` – **Package body**
+
+You can execute them using tools like **SQL\*Plus** or **SQL Developer**:
+
+```sql
+@HC_QR.pks
+@HC_QR.pkb
+
+--
 
 ## 🚀 How to Test
 
