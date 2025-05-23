@@ -1260,14 +1260,9 @@ BEGIN
          UTL_ENCODE.BASE64_ENCODE(
            DBMS_LOB.SUBSTR(
              hc_qr.get_qrcode_png(
-               p_value            => QR_TEXT,
-               --p_scale            => 5,
-               --p_quiet            => 5,
-               p_eclevel          => 'M',
-               p_foreground_color => '#000000',
-               p_background_color => '#FFFFFF'
+               p_value            => QR_TEXT
              ),
-             2000, 1
+             4000, 1
            )
          ));
 
@@ -1276,7 +1271,5 @@ EXCEPTION
     WHEN OTHERS THEN
         RAISE;
 END qr_base64;
-
-
 
  end hc_qr;
